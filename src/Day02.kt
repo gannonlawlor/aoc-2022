@@ -46,7 +46,7 @@ fun main() {
     fun part2(input: List<String>): Int {
         var points = 0
         for (line in input) {
-            val opponentMove = line.splitToArray()[0]
+            val opponentMove = line.splitToSpaceSeperatedArray()[0]
             val shouldMove = part2Map[line]!!
             val s = "$opponentMove $shouldMove"
             points += map[s]!!
